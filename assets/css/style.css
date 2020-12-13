@@ -2,7 +2,7 @@ body{
     font-family: 'Poppins', sans-serif;
     margin:0;
     display:grid;
-    grid-template-columns:1fr minmax(320px, 1170px) 1fr;
+    grid-template-columns:1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:". header_menu ."
                         "header header header";
 }
@@ -14,9 +14,14 @@ body{
 }
 h1,h2,h3,h4,h5,h6{
     margin:0;
+    padding:0;
+    color:#242f51;
 }
 p{
+    margin:0;
+    padding:0;
     font-size:16px;
+    color:#c4c4c6;
 }
 .header{
     grid-area:header;
@@ -25,18 +30,65 @@ p{
     height:831px;
     background:url("../images/headerImage.jpg")center no-repeat;
     background-size:cover;
+    position:relative;
+    z-index:0;
 }
 .header_menu{
-    /*grid-area:header_menu;*/
+    grid-area:header_menu;
     width:100%;
     display:flex;
+    justify-content: space-between;
+    align-items: center;
     margin:0 auto;
     margin-top:102px;
     margin-bottom:26px;
 }
+.nav_menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    max-width:689px;
+}
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:10px;
+    padding-bottom:12px;
+    border:none;
+    border-radius:20px;
+   background-color:#2500f9;
+   color:#fff;
+}
 .header_Logo{
     font-size:15px;
     font-weight:bold;
+}
+.header_Text{
+    grid-area:header_Text;
+    max-width:519px;
+   position:absolute;
+   z-index:1;
+   top:28.20%;
+   left:17.45%;
+   line-height:1.4;
+}
+.header_Text p{
+    max-width:362px;
+    font-size:18px;
+    background:#e2eaed;
+    display:flex;
+    align-items: center;
+    border-radius:20px;
+    color:#242f51;
+}
+.header_Text h1{
+    font-size:60px;
+    font-weight:600;
+    
 }
 
 @media(max-width:1250px){
@@ -47,12 +99,14 @@ p{
     }
     .header{
         width:100%;
-        max-width:1200px;
+        max-width:1250px;
         height:626px;
     }
-    
+    .header_menu{
+        margin-top:10px;
+    }
 }
-@media(max-width:850px){
+@media(max-width:768px){
     
     .header{
         width:100%;
@@ -60,14 +114,29 @@ p{
         height:400px;
     
     }
+    .nav_menu{
+        display:none;
+    }
     
-}
-@media(max-width:400px){
+@media(max-width:375px){
     
     .header{
         width:100%;
         max-width:375px;
         height:200px;
     }
-    
+    .header_Logo h1{
+        font-size:12px;
+    }
+    .header_Text{
+        width:100%;
+        max-width:100px;
+    }
+    .header_Text p{
+        font-size:8px;
+    }
+    .header_Text h1{
+        font-size:18px;
+    }
+}
 }
