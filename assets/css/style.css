@@ -21,7 +21,7 @@ p{
     margin:0;
     padding:0;
     font-size:16px;
-    color:#c4c4c6;
+    color:#616368;
 }
 .header{
     grid-area:header;
@@ -30,8 +30,15 @@ p{
     height:831px;
     background:url("../images/headerImage.jpg")center no-repeat;
     background-size:cover;
-    position:relative;
-    z-index:0;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.header_Logo h1{
+    color:#FCAE61;
+}
+.header_Logo span{
+    color:#242F51;
 }
 .header_menu{
     grid-area:header_menu;
@@ -50,7 +57,12 @@ p{
     width:100%;
     max-width:689px;
 }
+.nav_menu a{
+    text-decoration:none;
+    color:#242F51;
+}
 .btn{
+    width:171px;
     font-family: 'Poppins', sans-serif;
     font-size:16px;
     font-weight:bold;
@@ -60,8 +72,9 @@ p{
     padding-bottom:12px;
     border:none;
     border-radius:20px;
-   background-color:#2500f9;
-   color:#fff;
+    background-color:#2500f9;
+    color:#fff;
+    cursor: pointer;
 }
 .header_Logo{
     font-size:15px;
@@ -70,13 +83,13 @@ p{
 .header_Text{
     grid-area:header_Text;
     max-width:519px;
-   position:absolute;
-   z-index:1;
-   top:28.20%;
-   left:17.45%;
-   line-height:1.4;
+    height:370px;
+    margin-left:17.45%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
 }
-.header_Text p{
+.header_Text p:first-child{
     max-width:362px;
     font-size:18px;
     background:#e2eaed;
@@ -85,12 +98,20 @@ p{
     border-radius:20px;
     color:#242f51;
 }
+.header_Text p:last-child{
+    font-size:18px;
+    
+}
 .header_Text h1{
     font-size:60px;
     font-weight:600;
-    
+    line-height:1.4;
 }
-
+.header_Text a{
+    text-decoration:none;
+    margin-left:22px;
+    color:#2500f9;
+}
 @media(max-width:1250px){
     body{
         grid-template-columns:1fr;
@@ -117,6 +138,23 @@ p{
     .nav_menu{
         display:none;
     }
+    .btn{
+        width:70px;
+        font-size:8px;
+        padding:5px;
+    }
+    .header_Text{
+        margin-left:50px;
+        width:100%;
+        max-width:350px;
+    }
+    .header-Text p:first-child{
+        font-size:8px;
+    }
+    .header_Text h1{
+        font-size:30px;
+    }
+}
     
 @media(max-width:375px){
     
@@ -130,7 +168,13 @@ p{
     }
     .header_Text{
         width:100%;
+        max-width:150px;
+        height:180px;
+    }
+    .header_Text p:first-child{
+        width:100%;
         max-width:100px;
+        font-size:8px;
     }
     .header_Text p{
         font-size:8px;
@@ -138,5 +182,13 @@ p{
     .header_Text h1{
         font-size:18px;
     }
-}
+    .header_Text a{
+        font-size:6px;
+        margin-left:0px;
+    }
+    .header_Text img{
+        width:30px;
+        height:30px;
+    }
+
 }
