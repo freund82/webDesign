@@ -6,7 +6,8 @@ body{
     grid-template-areas:". header_menu ."
                         "header header header"
                         ". companies ."
-                        "features features features";
+                        "features features features"
+                        ". smart .";
 }
 
 *,
@@ -140,6 +141,7 @@ p{
     background: url("../images/features.jpg") center no-repeat;
     background-size:cover;
     line-height:1.8;
+    margin-bottom:170px;
 }
 .features_text{
     width:100%;
@@ -172,8 +174,35 @@ p{
 .iconsText_block--third{
     color:#40975F;
 }
-
-
+.smart{
+    grid-area:smart;
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;
+}
+.smart_mainText{
+    display:flex;
+    width:90%;
+    margin:0 auto;
+    margin-bottom:113px;
+    align-items: center;
+}
+.smart_mainText h1{
+    font-size:30px;
+}
+.smart_Line{
+    width:2px;
+    height:148px;
+    margin-left:77px;
+    margin-right:48px;
+}
+.smart_icons--Block{
+    display:flex;
+    justify-content: space-around;
+}
+.smart_icons{
+    width:25%;
+}
 
 /*Media*/
 
@@ -183,7 +212,8 @@ p{
         grid-template-areas:"header_menu"
                             "header"
                             "companies"
-                            "features";
+                            "features"
+                            "smart";
     }
     .header, .features{
         width:100%;
