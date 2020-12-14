@@ -34,6 +34,7 @@ p{
     display:flex;
     flex-direction:column;
     justify-content: space-around;
+    margin-bottom:114px;
 }
 .header_Logo h1{
     color:#FCAE61;
@@ -115,10 +116,22 @@ p{
 }
 .companies{
     grid-area:companies;
-    display:flex;
-    justify-content: space-around;
-    flex-wrap:wrap;
 }
+.companies p{
+    text-align:center;
+    margin-bottom:32px;
+}
+.companies_logo{
+    width:100%;
+    max-width:934px;
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+}
+
+
+/*Media*/
+
 @media(max-width:1280px){
     body{
         grid-template-columns:1fr;
@@ -134,12 +147,18 @@ p{
     .header_menu{
         margin-top:10px;
     }
+    .header_Text{
+        margin-left:100px;
+        width:100%;
+        max-width:520px;
+    }
 }
 @media(max-width:1024px){
     .header{
         width:100%;
         max-width:1024px;
         height:532px;
+        margin-bottom:30px;
     }
     .header_Text h1{
         font-size:40px;
