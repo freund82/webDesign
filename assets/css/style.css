@@ -5,7 +5,8 @@ body{
     grid-template-columns:1fr minmax(auto, 1170px) 1fr;
     grid-template-areas:". header_menu ."
                         "header header header"
-                        ". companies .";
+                        ". companies ."
+                        "features features features";
 }
 
 *,
@@ -116,6 +117,7 @@ p{
 }
 .companies{
     grid-area:companies;
+    margin-bottom:145px;
 }
 .companies p{
     text-align:center;
@@ -128,6 +130,49 @@ p{
     justify-content: space-between;
     margin:0 auto;
 }
+.features{
+    grid-area:features;
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    max-width:1600px;
+    height:831px;
+    background: url("../images/features.jpg") center no-repeat;
+    background-size:cover;
+    line-height:1.8;
+}
+.features_text{
+    width:100%;
+    max-width:428px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    margin-right:170px;
+    
+}
+.features_text--main h1{
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+.iconsText{
+    width:100%;
+    max-width:380px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+
+}
+.iconsText_block--first{
+    color:#F55767;
+}
+.iconsText_block--second{
+    color:#2563FF;
+}
+.iconsText_block--third{
+    color:#40975F;
+}
+
 
 
 /*Media*/
@@ -137,9 +182,10 @@ p{
         grid-template-columns:1fr;
         grid-template-areas:"header_menu"
                             "header"
-                            "companies";
+                            "companies"
+                            "features";
     }
-    .header{
+    .header, .features{
         width:100%;
         max-width:1280px;
         height:667px;
@@ -154,7 +200,7 @@ p{
     }
 }
 @media(max-width:1024px){
-    .header{
+    .header, .features{
         width:100%;
         max-width:1024px;
         height:532px;
@@ -171,11 +217,14 @@ p{
     .header_Text p{
         font-size:14px;
     }
-    
+    .features_text{
+        margin-right:0px;
+    }
 }
+
 @media(max-width:768px){
     
-    .header{
+    .header, .features{
         width:100%;
         max-width:768px;
         height:400px;
@@ -202,11 +251,38 @@ p{
       width:50px;
       height:50px;
     }
+    .companies{
+        margin-bottom:20px;
+    }
+    .features{
+        justify-content: space-around;
+    }
+    .features_text--main h1{
+        font-size:18px;
+    }
+    .features_text--main p{
+        font-size:10px;
+    }
+    .iconsText p{
+        font-size:10px;
+    }
+    .iconsText h3{
+        font-size:14px;
+    }
+    .iconsText img{
+        width:20px;
+        height:20px;
+    }
+    .features_text{
+        width:100%;
+        max-width:300px;
+        margin-right:20px;
+    }
 }
     
 @media(max-width:375px){
     
-    .header{
+    .header, .features{
         width:100%;
         max-width:375px;
         height:200px;
@@ -237,6 +313,12 @@ p{
     .header_Text img{
         width:30px;
         height:30px;
+    }
+    .companies{
+        margin-bottom:50px;
+    }
+    .features_text--main h1{
+        text-align:center;
     }
 
 }
