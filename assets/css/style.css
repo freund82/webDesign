@@ -7,7 +7,8 @@ body{
                         "header header header"
                         ". companies ."
                         "features features features"
-                        ". smart .";
+                        ". smart ."
+                        " designed designed designed";
 }
 
 *,
@@ -179,6 +180,7 @@ p{
     width:100%;
     max-width:1000px;
     margin:0 auto;
+    margin-bottom:110px;
 }
 .smart_mainText{
     display:flex;
@@ -203,6 +205,32 @@ p{
 .smart_icons{
     width:25%;
 }
+.designed{
+    grid-area:designed;
+    width:100%;
+    max-width:1600px;
+    height:572px;
+    background:url("../images/designed1.jpg") center no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.designed_Block{
+    width:30%;
+    margin-right:120px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    
+}
+.designed_Block h1{
+    font-size:36px;
+}
+.designed_Block button{
+    font-size:15px;
+}
 
 /*Media*/
 
@@ -213,7 +241,8 @@ p{
                             "header"
                             "companies"
                             "features"
-                            "smart";
+                            "smart"
+                            "designed";
     }
     .header, .features{
         width:100%;
